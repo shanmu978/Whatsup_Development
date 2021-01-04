@@ -1,0 +1,100 @@
+selenium Q&A:
+
+what is selenium:
+it is automation suit that is used for automating webbased application 
+it suppports multiple browsers and language and platforms.
+
+different forms of selenium:
+
+selenium webdriver:it is used to automate webapplication
+selenium IDE:firefox plugin that works on record and playback principle
+selenium RC:it is remote control which use to automate webapplication using javascript
+selenium grid:it allows selenium test to run in parallel across multiple machine
+
+advantages of selenium:
+it is a open source so its free of cost.
+supports multiple languages.
+supports multiple browsers.
+supports various platforms.
+using selenium IDE componenets,non programmers can also write automation script.
+
+limitations:
+we cannnot automate desktop application.
+we cannot auotomate web services.
+we have to rely on external libraries and tools for perfroming tasks like junit,testng,log4j.
+
+ways of locating element in selenium:
+
+id:
+name:
+class name:
+tag name:
+xpath:
+css selector:
+linktext:
+partial linktext:
+
+what is Xpath:
+it is query language for selecting nodes from xml document.
+
+absolute xpath:
+it is way of locating element using xml expression begins from the root node.
+disadvantage of using this is if any one UI element changes no such element found exception will be thrown.
+(/) slash will be used.
+
+relative xpath:
+it is way of locating element using xml expression begins from anywhere in HTML document.it is unaffected even if some UI
+elements changed.
+(//) slash will be used.
+xpath expression=//*[text()='username']
+
+switch to multiple windows:
+driver.getwindowhandle();it will 
+driver.getwindowhandle();it will switch to multiple windows
+for (string windowhandle : driver.getwindowhandles())
+{
+driver.sitchto.window(handle);
+}
+
+move to a prticular frame:
+driver.switchto().frame({"framename/id"});
+for locating  frame we can use imdex,id,name.
+
+how can we fetch a text in selenium:
+driver.findElemntby().gettext(); 
+
+how to find value of different attributes like name,class,id of element.
+driver.findElemntby().getAttribute("value");
+
+to delete cookies:
+driver.manage().deleteallcookies(); 
+
+implicit wait:
+implicit wait is a wait which waits for a specified time while locating element before 
+throwing nosuchelement exception.
+
+driver.manage().timeout().implictlywait(0,timeunit.seconds);
+
+double click in selenium:
+Actions action =new Actions(driver);
+webelemeent element=driver.findelementby();
+action.doubleclick(element).build.perform();
+
+contextclick(right click) in selenium:
+Actions action =new Actions(driver);
+webelemeent element=driver.findelementby();
+action.contextclick(element).build.perform();
+
+mouse hover an element in selenium:
+
+Actions action =new Actions(driver);
+webelemeent element=driver.findelementby();
+action.moveToElement(element).build.perform();
+
+without using system.set property can we open a browser?
+yes
+we can do environmental variable:
+in system variables go to path and set:the location of the chrome driver or fire fox driver.
+
+
+
