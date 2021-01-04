@@ -96,5 +96,5 @@ yes
 we can do environmental variable:
 in system variables go to path and set:the location of the chrome driver or fire fox driver.
 
-
+--------------------------------------------------------------------------------------------------
 
